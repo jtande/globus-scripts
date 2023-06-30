@@ -1,6 +1,6 @@
 # NCSU PSI Globus Automation 
 Simple code for various use cases using Globus.
-
+Credit to [jaswilli](https://github.com/globus/native-app-examples)
 ## Overview
 
 There are three example use cases in this repo:
@@ -37,7 +37,7 @@ The Python codes are built using the
 
 * `sudo easy_install pip`
 * `sudo pip install virtualenv`
-* `git clone https://github.com/globus/automation-examples`
+* `git clone https://github.com/jtande/globus-scripts`
 * `cd automation-examples`
 * `virtualenv venv`
 * `source venv/bin/activate`
@@ -51,8 +51,8 @@ The Python codes are built using the
 * `sudo apt-get install python-pip`
 * `sudo pip install virtualenv`
 * `sudo apt-get install git`
-* `git clone https://github.com/globus/automation-examples`
-* `cd automation-examples`
+* `git clone https://github.com/jtande/globus-scripts`
+* `cd globus-scripts`
 * `virtualenv venv`
 * `source venv/bin/activate`
 * `pip install -r requirements.txt`
@@ -64,14 +64,16 @@ The Python codes are built using the
 * Install Python (<https://www.python.org/downloads/windows/>)
 * `pip install virtualenv`
 * Install git (<https://git-scm.com/downloads>)
-* `git clone https://github.com/globus/automation-examples`
-* `cd automation-examples`
+* `git clone https://github.com/jtande/globus-scripts`
+* `cd globus-scripts`
 * `virtualenv venv`
 * `venv\Scripts\activate`
 * `pip install -r requirements.txt`
 
 ## Running the scripts
+'globus_folder_sync.py' and 'globus_folder_sync_timer.py' executed as follow: 
 <the-script.py> -h will return the arguments and the default values
+
 ### globus_folder_sync.py 
 
 **Note**: Both ./globus_folder_sync.py and ./globus_folder_sync_timer.py require you to login (see Login section for help).

@@ -71,7 +71,7 @@ The Python codes are built using the
 * `pip install -r requirements.txt`
 
 ## Running the scripts
-'globus_folder_sync.py' and 'globus_folder_sync_timer.py' executed as follow: 
+[`globus_folder_sync.py`](globus_folder_sync.py) and [`globus_folder_sync_timer.py`](globus_folder_sync_timer.py) are executed as follow: 
 <the-script.py> -h will return the arguments and the default values
 
 ### globus_folder_sync.py 

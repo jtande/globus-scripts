@@ -16,8 +16,9 @@ The Python codes are built using the
 [Globus SDK](https://globus-sdk-python.readthedocs.io/en/stable/).
 * [`globus_folder_sync.py`](globus_folder_sync.py): submits a recursive transfer with sync option; uses a [Native App grant](https://github.com/globus/native-app-examples).
 * [`globus_folder_sync_timer.py`](globus_folder_sync_timer.py): submits an automated recursive transfer with sync option; After the completion of the first task, the transfer will be executed every midnight EST
-* [`gce-login-config.py`](gce-login-config.py): submits a globus finction on the HPC login node;
-* [`gce-login-config.py`](gce-login-config.py): submits a globus finction on the HPC compute node;
+* [`gce-login-config.py`](gce-login-config.py): submits a globus function on the HPC login node;
+* [`gce-login-config.py`](gce-login-config.py): submits a globus function on the HPC compute node;
+* [`gc_batch_job.py`](gc_batch_job.py): an example globus compute function;
 
 
 

@@ -40,7 +40,7 @@ SOURCE_ENDPOINT = '2a32604c-fe5e-11ed-ba4c-09d6a6f08166'
 # Globus PSI Research Storage
 DESTINATION_ENDPOINT = '23438250-7ba0-47be-b165-85f1ebf18b51'
 # Copy data off of the endpoint share
-SOURCE_PATH = '/data/rdata'
+SOURCE_PATH = '/data/rdata/'
 
 # Destination Path -- The directory will be created if it doesn't exist
 DESTINATION_PATH = '/sandhills/test/'

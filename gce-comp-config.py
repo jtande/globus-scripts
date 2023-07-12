@@ -1,5 +1,12 @@
-# config.py
-## run jobs on compute nodes 
+#############################################################
+#
+#
+#  This configuration file will allow access to the compute
+#  nodes on the Hazel HPC Cluster at North Carolina State 
+#  University.
+# 
+#
+#############################################################
 from globus_compute_endpoint.endpoint.utils.config import Config
 from globus_compute_endpoint.executors import HighThroughputExecutor
 
@@ -13,10 +20,6 @@ config = Config(
     executors=[
         HighThroughputExecutor(
             label='Hazel_HTEX', # Label for this execution instance
-            # Ensure that the working dir is writeable from the compute nodes,
-            # for eg. paths below /gpfs/alpine/world-shared/
-#            working_dir='$WORK_DIR', # YOUR_WORKING_DIR_ON_SHARED_FS,
-#            cores_per_node=1,
             address=address_by_interface('ens5f0'),  # This assumes Parsl is running on login node
             #worker_port_range=(50000, 55000),
             provider=LSFProvider(
@@ -26,8 +29,9 @@ config = Config(
                 nodes_per_block=1,
                 init_blocks=1,
                 max_blocks=1,
-                queue="standard",
-                worker_init='''module load conda; conda activate /rs1/researchers/j/jfossot/conda_env''',
+                queue="standard",    # change this to any queue that meets your function's need
+                # worker_init prepares the compute environment
+                worker_init='''module load conda; conda activate /path/to/your/condaenv/conda_env''',
                 scheduler_options="#BSUB -R span[hosts=1]",  # Confined requested cores to a single node
 #                project='PSI Globus Compute',
                 cores_per_node=12,
@@ -43,7 +47,7 @@ config = Config(
 meta = {
     "name": "ncsu-gce-jfossot",
     "description": "Test Profile",
-    "organization": "NC State University",
+    "organization": "North Carolina State University",
     "department": "Research Computing",
     "public": False,
     "visible_to": [],
